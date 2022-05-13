@@ -26,8 +26,8 @@ function getPic(event) {
         // console.log(data)
 
         
-        $('.picture').html(`<img src="${data.results[0].urls.small}"/>`)
-        $('body').css({backgroundImage: `url(${data.results[0].urls.full})`,backgroundSize:'cover', height:'100vh'});
+        $('.picture').html(`<img src="${data.results[4].urls.small}"/>`)
+        $('body').css({backgroundImage: `url(${data.results[4].urls.full})`,backgroundSize:'cover', height:'100vh', width:'1920px'});
     //    blur background image
 
     })
