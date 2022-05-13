@@ -25,15 +25,13 @@ function getPic(event) {
     $.ajax(UNSPLASH + pic).then(function (data) {
         // console.log(data)
 
-        $('.picture').html(`<img src="${data.results[0].urls.small}"/>`)
         
+        $('.picture').html(`<img src="${data.results[0].urls.small}"/>`)
+        $('body').css({backgroundImage: `url(${data.results[0].urls.full})`,backgroundSize:'cover', height:'100vh'});
+    //    blur background image
 
     })
 };
-
-
-
-
 
 
 $form.on('submit', getData)
@@ -43,8 +41,6 @@ function getData(event) {
     event.preventDefault();
     var city = $input.val();
    
-
-
     $.ajax(URL + city).then(function (data) {
         console.log(data)
         
@@ -58,8 +54,6 @@ function getData(event) {
         function (error) {
         console.log(error)
     })
-
-
 
 };
 
